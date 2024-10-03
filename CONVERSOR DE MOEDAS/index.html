@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>bicepsdorique</title>
+    </head>
+    <body>
+        <div class="quadro">
+            <h2>Conversor de Moedas</h2>
+            <label for="dollar">Dólar</label>
+            <input type="number" id= "dollar" step= "0.01" /><br><br>
+            
+            <label for="real">Real</label>
+            <input type="text" id= "real"  readonly/><br><br>
+            
+            <button onclick="converterMoeda()">CONVERTER</button>
+            
+        </div>
+        
+        <style>
+          body {
+            background-color: rgb(218, 212, 230);
+          text-align:center}
+
+          button 
+          {background-color: rgb(185, 177, 223);
+          color:black;
+          padding: 10px;
+        }
+          
+
+          button:hover {
+            background-color:rgb(158, 133, 182);
+            cursor: pointer;
+
+          }
+          
+          .quadro{
+            border: solid 10px;
+            width: 250px;
+            margin: auto;
+            padding: 15px;
+            border-radius: 10px;
+            
+
+          }
+        
+        </style>
+      
+          </body>
+        
+        <script>
+            const dolarParaReal = 5.25;
+            function converterMoeda() {
+                const dollarInput = document.getElementById("dollar");
+                
+                const realInput = document.getElementById("real");
+                
+                const dollarValue = parseFloat(dollarInput.value);
+                
+                const realValue = dollarValue * dolarParaReal;
+                
+                realInput.value = realValue.toFixed(2);
+                
+            }
+            
+                </script>
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
